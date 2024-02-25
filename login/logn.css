@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Poppins:wght@300&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins','lexend';
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("ales-krivec-4miBe6zg5r0-unsplash.jpg"); /* Replace with your image */
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins','Lexend';
+  color: rgb(0, 0, 0);
+  flex-direction: column;   
+}
+
+
+.wrapper{
+    position: relative;
+    width: 410px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: trasform .5s ease, height .2s ease ;
+  }
+
+  .wrapper.active-popup {
+    transform: scale(1);
+  }
+
+  .wrapper.active {
+    height: 520px;
+  }
+  .wrapper .form-box{
+    width:100% ;
+    padding: 40px;
+  }
+
+.wrapper .form-box.login{
+    transition:transform .18s ease;
+    transform: translateX(0) ;
+  }
+
+
+  .wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-500px);
+  }
+  .wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(500px);
+  }
+
+.wrapper.active .form-box.register{
+    transition:transform .18s ease;
+    transform: translateX(0) ;
+  }
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 45px;
+    height: 45px;
+    background: #3b7c1d9f;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+  .form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+  }
+  .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+  }
+
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938 ;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus  ~label,
+.input-box input:valid  ~label {
+    top:-5px ;
+}
+.input-box input {
+    width:100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.butun{
+    width: 100%;
+    height: 45px;
+    background: #318b008d;
+    border:none;
+    outline: none;
+    border-radius:6px ;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+
+}
+
+.login-register{
+    font-size: .9em;
+    color:#162938;
+    text-align: center;
+    font-weight: 500;
+}
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.l{
+  display: flex;
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+
+
+
